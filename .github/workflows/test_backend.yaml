@@ -1,25 +1,22 @@
 name: test_backend
 
-on: 
+on:
   pull_request:
   push:
     branches:
-      - main
+    - main
 
 jobs:
   test_backend:
-    runs-on:  ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Go
-        uses: actions/setup-go@v3
-        with:
-          go-version: 1.19.x
-      - name: Check partition
-        run: ls -al
-      - name: Run tests 
-        run: |
-          cd backend
-          go test -v ./...
-
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19.x
+    - name: run test
+      run: |
+        cd backend
+        go test -v ./...
