@@ -16,9 +16,10 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: 1.19.x
+      - name: Check partition
+        run: ls -al
       - name: Run tests 
         run: 
-          ls -al
-          cd backend
+          cd entity/backend 
           go test -v ./...
 
