@@ -19,7 +19,7 @@ jobs:
       - name: Check partition
         run: ls -al
       - name: Run tests 
-        run: 
+        run: |
           cd backend
           go test -v ./...
 
