@@ -10,7 +10,7 @@ jobs:
   test_backend:
     runs-on:  ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Go
         uses: actions/setup-go@v3
