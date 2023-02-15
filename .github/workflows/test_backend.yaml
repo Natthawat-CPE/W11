@@ -20,6 +20,6 @@ jobs:
         run: ls -al
       - name: Run tests 
         run: 
-          cd backend/entity
+          cd backend
           go test -v ./...
 
